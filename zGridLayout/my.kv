@@ -1,0 +1,32 @@
+# the name of the file comes from class which includes our build function
+<MyGrid>
+    name: name
+    lastname: lastname
+    email: email
+
+    GridLayout:
+        cols:1
+        size: root.width-20, root.height-20
+        pos: 10, 10
+
+        GridLayout:
+            cols:2
+            Label:
+                text: "Name : "
+            TextInput:
+                id: name
+                multiline: False
+            Label:
+                text: "Last Name : "
+            TextInput:
+                id: lastname
+                multiline: False
+            Label:
+                text: "Email : "
+            TextInput:
+                id: email
+                multiline:False
+
+        Button:
+            text:"Submit"
+            on_press: root.btn()
